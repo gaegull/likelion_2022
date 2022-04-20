@@ -1,0 +1,16 @@
+h1 {
+    background-color: pink;
+    width: 50%;
+    text-align: center;
+}
+h3 {
+    background-color: greenyellow;
+    width: 50%;
+    text-align: left;
+}
+p {
+    background-color: royalblue;
+    text-align: right;
+    width: 50%;
+}
+.justify {text-align: justify}
