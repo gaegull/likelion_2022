@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .blue{
+            width: 0px;
+            height: 5px;
+            background-color: rgb(92, 100, 254);
+        }
+        .lyrics{
+            width: 250px;
+            height: 150px;
+            overflow-y: scroll;
+            background-color: rgb(192, 224, 255);
+        }
+    </style>
+    <div class="blue"></div>
+    <div class="lyrics">
+        <p>
+            hold on hold on wait for a minute 내가 원하는 건 잠깐의 삶
+            길고 따분한 붉은 실이 아님 풀어줘 내 목줄과 이름표에 나비는 내가 아님
+            camera camera 꺼라난 구경거리가 아님 조금 더 받고 조금 덜 주고 싶어
+            조금 더 알고 조금 덜 안고 싶어 한 발짝 더 다가오면 난 이곳을 그냥 뜨고 싶어
+            조금 더 받고 조금 덜 주고 싶어
+        </p>
+    </div>
+    <script>
+        let bar=document.querySelector('.blue');
+        let lyrics=document.querySelector('.lyrics');
+
+        lyrics.addEventListener('scroll',function(){
+            let scrollTop = lyrics.scrollTop;
+            let scrollHeight=lyrics.scrollHeight - lyrics.clientHeight;
+            let per = scrollTop/scrollHeight;
+            bar.style.width=`${per*250}px`;
+        });
+    </script>
+</body>
+</html>
